@@ -18,7 +18,7 @@ class AddTask : AppCompatActivity() {
         db = taskDatabaseHelper(this)
 
         binding.saveButton.setOnClickListener {
-            val title = binding.addTaskHeading.text.toString()
+            val title = binding.addTaskHead.text.toString()
             val content = binding.addTaskDescription.text.toString()
             val deadline = binding.addTaskDeadLine.text.toString()
             val priority = binding.addTaskPriority.text.toString()
