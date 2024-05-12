@@ -23,7 +23,6 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/baseline_airport_shuttle_24"
         android:layout_alignParentEnd="true"
-
         android:layout_alignTop="@id/editTaskHeading"
         android:layout_marginEnd="6dp"/>
 
@@ -55,32 +54,27 @@
         android:layout_marginTop="16dp"
         android:maxLines="6"/>
 
-    <EditText
-        android:id="@+id/updateTaskDeadLine"
+    <Spinner
+        android:id="@+id/updateTaskPrioritySpinner"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:hint="Enter Deadline"
-        android:padding="12dp"
-        android:textSize="20sp"
-        android:background="@drawable/border_1"
         android:layout_below="@id/updateTaskDescription"
         android:layout_marginTop="16dp"
-        android:maxLines="1"/>
+        android:background="@drawable/border_1"
+        android:textSize="20sp"/>
 
-    <EditText
-        android:id="@+id/updateTaskPriority"
+    <Button
+        android:id="@+id/updateTaskDeadlineButton"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:hint="Enter Priority(1-4)"
-        android:padding="12dp"
-        android:textSize="20sp"
-        android:background="@drawable/border_1"
-        android:layout_below="@id/updateTaskDeadLine"
+        android:layout_below="@id/updateTaskPrioritySpinner"
         android:layout_marginTop="16dp"
-        android:maxLines="1"/>
+        android:background="@drawable/border_1"
+        android:text="Select Deadline"
+        android:textSize="20sp"/>
 
 </RelativeLayout>
