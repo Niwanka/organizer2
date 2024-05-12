@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity">
+
+    <TextView
+        android:id="@+id/editTaskHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Edit Task"
+        android:textSize="24sp"/>
+
+    <ImageButton
+        android:id="@+id/updateSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_airport_shuttle_24"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignTop="@id/editTaskHeading"
+        android:layout_marginEnd="6dp"/>
+
+    <EditText
+        android:id="@+id/updateTaskHead"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter Title"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/border_1"
+        android:layout_below="@id/editTaskHeading"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/updateTaskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter Description"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/border_1"
+        android:layout_below="@id/updateTaskHead"
+        android:layout_marginTop="16dp"
+        android:maxLines="6"/>
+
+    <EditText
+        android:id="@+id/updateTaskDeadLine"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter Deadline"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/border_1"
+        android:layout_below="@id/updateTaskDescription"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/updateTaskPriority"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter Priority(1-4)"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:background="@drawable/border_1"
+        android:layout_below="@id/updateTaskDeadLine"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"/>
+
+</RelativeLayout>

@@ -1,9 +1,11 @@
 package com.example.organizer
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,7 @@ class TasksAdapter(private var tasks: List<Task>, context: Context) :  RecyclerV
         val descTextView: TextView = itemView.findViewById(R.id.descTextView)
         val deadLineTextView: TextView= itemView.findViewById(R.id.deadLineTextView)
         val priorityTextView: TextView= itemView.findViewById(R.id.priorityTextView)
+        val updateButton: ImageButton= itemView.findViewById(R.id.updateSaveButton)
     }
 
 
@@ -36,6 +39,14 @@ class TasksAdapter(private var tasks: List<Task>, context: Context) :  RecyclerV
         holder.descTextView.text = currentTask.description
         holder.deadLineTextView.text = currentTask.deadline
         holder.priorityTextView.text = currentTask.priority
+
+        holder.updateButton.setOnClickListener {
+            val intent= Intent(holder.itemView.context, UpdateActivity::class.java).apply{
+                putExtra("task_id", currentTask.id)
+            }
+            holder.itemView.context.startActivity(intent)
+
+        }
     }
 
     fun refreshData(newTasks: List<Task>)
