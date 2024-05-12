@@ -41,6 +41,16 @@
 
                 />
 
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+
+                android:src="@drawable/baseline_attachment_24"
+
+                />
+
         </RelativeLayout>
 
             <TextView

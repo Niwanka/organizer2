@@ -7,9 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class TasksAdapter(private var tasks: List<Task>, context: Context) :  RecyclerView.Adapter<TasksAdapter.TaskViewHolder>(){
+
+    private val db: taskDatabaseHelper= taskDatabaseHelper(context)
 
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
@@ -17,6 +20,7 @@ class TasksAdapter(private var tasks: List<Task>, context: Context) :  RecyclerV
         val deadLineTextView: TextView= itemView.findViewById(R.id.deadLineTextView)
         val priorityTextView: TextView= itemView.findViewById(R.id.priorityTextView)
         val updateButton: ImageButton= itemView.findViewById(R.id.updateButton)
+        val deleteButton: ImageButton= itemView.findViewById(R.id.deleteButton)
     }
 
 
@@ -45,6 +49,12 @@ class TasksAdapter(private var tasks: List<Task>, context: Context) :  RecyclerV
             }
             holder.itemView.context.startActivity(intent)
 
+        }
+
+        holder.deleteButton.setOnClickListener {
+            db.deleteTask(currentTask.id)
+            refreshData(db.getAllTasks())
+            Toast.makeText(holder.itemView.context, "Task Deleted", Toast.LENGTH_SHORT).show()
         }
     }
 
