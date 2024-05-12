@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="@drawable/border_1">
 
 
         <RelativeLayout
@@ -28,7 +29,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title"
-                android:textSize="18sp"
+                android:textColor="@color/Text1"
+                android:textSize="22sp"
                 android:textStyle="bold"/>
             
             <ImageButton

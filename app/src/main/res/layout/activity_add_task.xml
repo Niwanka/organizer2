@@ -5,6 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:textColor="@color/white"
     tools:context=".AddTask">
 
     <TextView
@@ -14,6 +16,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
+        android:textColor="@color/Text1"
+        android:textStyle="bold"
         android:text="Add Task" 
         android:textSize="24sp"/>
 
@@ -38,6 +42,7 @@
         android:textSize="20sp"
         android:background="@drawable/border_1"
         android:layout_below="@id/addTaskHeading"
+
         android:layout_marginTop="16dp"
         android:maxLines="1"/>
 
@@ -52,8 +57,21 @@
         android:textSize="20sp"
         android:background="@drawable/border_1"
         android:layout_below="@id/addTaskHead"
+
         android:layout_marginTop="16dp"
         android:maxLines="6"/>
+
+    <Spinner
+        android:id="@+id/addTaskPrioritySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_1"
+        android:hint="Select Priority"
+
+        android:layout_below="@id/addTaskDescription"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/addTaskDeadlineButton"
@@ -63,21 +81,14 @@
         android:layout_marginEnd="8dp"
         android:hint="Select Deadline"
         android:textSize="20sp"
-        android:background="@drawable/border_1"
-        android:layout_below="@id/addTaskDescription"
+        android:background="@color/Text1"
+        android:layout_below="@id/addTaskPrioritySpinner"
         android:layout_marginTop="16dp"
+
         android:maxLines="1"/>
 
 
-    <Spinner
-        android:id="@+id/addTaskPrioritySpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:hint="Select Priority"
-        android:layout_below="@id/addTaskDeadlineButton"
-        android:layout_marginTop="16dp"/>
+
 
 
 </RelativeLayout>

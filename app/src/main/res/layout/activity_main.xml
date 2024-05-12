@@ -16,6 +16,8 @@
         android:text="Tasks"
         android:layout_marginStart="18dp"
         android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/Text1"
         />
     
     <androidx.recyclerview.widget.RecyclerView
