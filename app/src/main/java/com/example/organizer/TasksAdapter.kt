@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 
 class TasksAdapter(private var tasks: List<Task>, context: Context) :  RecyclerView.Adapter<TasksAdapter.TaskViewHolder>(){
@@ -17,7 +16,7 @@ class TasksAdapter(private var tasks: List<Task>, context: Context) :  RecyclerV
         val descTextView: TextView = itemView.findViewById(R.id.descTextView)
         val deadLineTextView: TextView= itemView.findViewById(R.id.deadLineTextView)
         val priorityTextView: TextView= itemView.findViewById(R.id.priorityTextView)
-        val updateButton: ImageButton= itemView.findViewById(R.id.updateSaveButton)
+        val updateButton: ImageButton= itemView.findViewById(R.id.updateButton)
     }
 
 
@@ -41,7 +40,7 @@ class TasksAdapter(private var tasks: List<Task>, context: Context) :  RecyclerV
         holder.priorityTextView.text = currentTask.priority
 
         holder.updateButton.setOnClickListener {
-            val intent= Intent(holder.itemView.context, UpdateActivity::class.java).apply{
+            val intent= Intent(holder.itemView.context, UpdateTaskActivity::class.java).apply{
                 putExtra("task_id", currentTask.id)
             }
             holder.itemView.context.startActivity(intent)
