@@ -32,14 +32,14 @@
                 android:textColor="@color/Text1"
                 android:textSize="22sp"
                 android:textStyle="bold"/>
-            
+
             <ImageButton
                 android:id="@+id/updateButton"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="30dp"
-                android:src="@drawable/baseline_architecture_24"
+                android:src="@drawable/icons8_edit_24"
 
                 />
 
@@ -49,7 +49,7 @@
                 android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
 
-                android:src="@drawable/baseline_attachment_24"
+                android:src="@drawable/icons8_delete_24"
 
                 />
 

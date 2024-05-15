@@ -25,11 +25,11 @@
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/baseline_airport_shuttle_24"
+        android:layout_alignTop="@id/addTaskHeading"
         android:layout_alignParentEnd="true"
 
-        android:layout_alignTop="@id/addTaskHeading"
-        android:layout_marginEnd="6dp"/>
+        android:layout_marginEnd="6dp"
+        app:srcCompat="@drawable/icons8_save_24" />
     
     <EditText
         android:id="@+id/addTaskHead"
